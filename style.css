@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: rgb(235,238,174);
+background: radial-gradient(circle, rgba(235,238,174,1) 0%, rgba(148,233,190,1) 100%);
+color:rgb(19, 18, 18);
+}
+header{
+    font-size:1.5em;
+}
+header,
+form{
+    min-height:20vh;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+}
+
+form input, form button{
+    padding:0.5em;
+    font-size:2em;
+    border:none;
+    background: white;
+}
+
+form button{
+    color :  rgb(19, 18, 18);
+    background: white;
+    cursor: pointer;
+    transition: all o.3s ease;
+}
+form button:hover{
+background:rgb(19, 18, 18) ;
+color:white;
+}
+
+.to-do-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.to-do-list{
+    min-width:30%;
+    list-style: none;
+}
+.todo{
+    margin:0.5em;
+    background: white;
+    color:black;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease
+    
+}
+.todo li {
+    flex : 1;
+}
+.trash-btn, 
+.completed-btn{
+    background:rgba(148,233,190,1) 100%;
+    color:white;
+    border:none;
+    padding: 1em;;
+    margin-left: 0.25em;
+    cursor: pointer;
+    font-size: 1em;
+}
+.completed-btn{
+    background:rgb(74, 163, 214) 100% ;
+}
+.todo-item{
+    padding: 0em 0.5em;
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.25;
+}
+.fall{
+    transform: translateY(8em) rotateZ(20deg);
+    opacity :0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+    border:none;
+    /* color:rgba(148,233,190,1) 100%;
+    width:10em;
+    cursor: pointer; */
+
+
+}
+.selection{
+    margin:1em;
+    position:relative;
+    overflow:hidden;
+    /* align-items: center; */
+}
+select{
+    color:rgb(66, 125, 202);
+    width:10em;
+    cursor: pointer;
+    padding:1em;
+}
+.selection::after{
+    content: "\25BC";
+    position: absolute;
+    background: rgba(148,233,190,1) 100%;
+    top:0;
+    right:0;
+    padding:1em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.selection:hover::after{
+    background:white;
+    color:rgb(224, 69, 69)
+
+}
